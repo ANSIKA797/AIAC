@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'unsafe-inline'; script-src 'unsafe-inline';" />
+  <title>Secure Feedback Form (XSS Protected)</title>
+  <style>
+    body { font-family: 'Segoe UI', sans-serif; background: #f8fafc; padding: 2rem; }
+    .box { max-width: 500px; margin: 0 auto; background: #fff; padding: 1.5rem; border-radius: 10px; border: 1px solid #cbd5e1; }
+    textarea { width: 100%; height: 80px; padding: 0.6rem; box-sizing: border-box; margin: 0.5rem 0 1rem; }
+    button { background: #0f766e; color: #fff; border: none; padding: 0.7rem 1.2rem; border-radius: 6px; cursor: pointer; }
+    .preview { margin-top: 1rem; padding: 0.8rem; background: #f1f5f9; border-radius: 6px; }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <h2>Secure Feedback Form</h2>
+    <form id="fbForm">
+      <label for="comment">Feedback:</label>
+      <textarea id="comment" placeholder="Enter feedback..."></textarea>
+      <button type="submit">Submit Safely</button>
+    </form>
+    <div class="preview"><strong>Rendered Output:</strong> <span id="output">No feedback yet.</span></div>
+  </div>
+  <script>
+    // Safe: uses textContent (never innerHTML) so HTML/script tags are escaped automatically
+    document.getElementById("fbForm").addEventListener("submit", function (e) {
+      e.preventDefault();
+      const raw = document.getElementById("comment").value;
+      document.getElementById("output").textContent = raw;
+    });
+  </script>
+</body>
+</html>
