@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Spice Garden | Digital Menu</title>
+  <style>
+    body { font-family: 'Segoe UI', sans-serif; background: #fffbeb; color: #451a03; margin: 0; padding: 2rem 1.5rem; }
+    header { text-align: center; margin-bottom: 1.5rem; }
+    header h1 { color: #b45309; font-size: 2.1rem; margin-bottom: 0.25rem; }
+    .menu-grid { max-width: 960px; margin: 0 auto; display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.25rem; }
+    .dish-card { background: #ffffff; border: 1px solid #fde68a; border-radius: 12px; padding: 1.25rem; transition: transform 0.25s ease, border-color 0.25s ease; }
+    .dish-card:hover { transform: translateY(-5px); border-color: #d97706; }
+    .dish-top { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 0.5rem; }
+    .dish-name { font-size: 1.1rem; font-weight: 700; color: #78350f; }
+    .dish-price { font-weight: 700; color: #15803d; font-size: 1.05rem; }
+    .dish-desc { color: #78716c; font-size: 0.92rem; line-height: 1.5; margin: 0; }
+    @media (max-width: 640px) { .menu-grid { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Spice Garden Bistro</h1>
+    <p>Freshly prepared regional favorites</p>
+  </header>
+  <main class="menu-grid">
+    <div class="dish-card">
+      <div class="dish-top"><span class="dish-name">Paneer Tikka Masala</span><span class="dish-price">Rs. 280</span></div>
+      <p class="dish-desc">Char-grilled cottage cheese cubes simmered in a rich spiced tomato gravy.</p>
+    </div>
+    <div class="dish-card">
+      <div class="dish-top"><span class="dish-name">Hyderabadi Veg Biryani</span><span class="dish-price">Rs. 240</span></div>
+      <p class="dish-desc">Fragrant basmati rice slow-cooked with saffron, herbs, and seasonal vegetables.</p>
+    </div>
+    <div class="dish-card">
+      <div class="dish-top"><span class="dish-name">Garlic Butter Naan</span><span class="dish-price">Rs. 70</span></div>
+      <p class="dish-desc">Tandoor-baked flatbread brushed with roasted garlic and melted butter.</p>
+    </div>
+    <div class="dish-card">
+      <div class="dish-top"><span class="dish-name">Mango Lassi</span><span class="dish-price">Rs. 110</span></div>
+      <p class="dish-desc">Chilled Alphonso mango yogurt smoothie topped with crushed pistachios.</p>
+    </div>
+  </main>
+</body>
+</html>

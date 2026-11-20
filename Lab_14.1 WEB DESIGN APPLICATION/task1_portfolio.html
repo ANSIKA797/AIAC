@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Adagiri Ansika | Portfolio</title>
+  <style>
+    :root { --bg: #0f172a; --card: #1e293b; --accent: #6366f1; --text: #f1f5f9; --muted: #94a3b8; }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; font-family: 'Segoe UI', system-ui, sans-serif; }
+    body { background: var(--bg); color: var(--text); line-height: 1.6; }
+    header { position: sticky; top: 0; background: #0f172a; border-bottom: 1px solid #334155; padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; }
+    nav a { color: var(--text); text-decoration: none; margin-left: 1.5rem; font-weight: 500; }
+    nav a:hover { color: var(--accent); }
+    section { max-width: 1000px; margin: 0 auto; padding: 2.5rem 2rem; }
+    h1 { font-size: 2.1rem; margin-bottom: 0.75rem; }
+    h2 { font-size: 1.5rem; color: var(--accent); margin-bottom: 1rem; }
+    .projects-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; }
+    .card { background: var(--card); padding: 1.25rem; border-radius: 10px; border: 1px solid #334155; }
+    .card h3 { margin-bottom: 0.5rem; }
+    .card p { color: var(--muted); font-size: 0.92rem; }
+    .contact-box { background: var(--card); padding: 1.25rem; border-radius: 10px; display: flex; flex-wrap: wrap; gap: 1.5rem; justify-content: space-between; }
+    @media (max-width: 720px) { .projects-grid { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+  <header>
+    <strong>Adagiri Ansika</strong>
+    <nav>
+      <a href="#about">About Me</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+  <section id="about">
+    <h1>Hi, I'm Adagiri Ansika</h1>
+    <p>B.Tech Computer Science & Engineering student (Batch 23) passionate about full-stack web development, RESTful APIs, and AI-assisted software engineering.</p>
+  </section>
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="projects-grid">
+      <div class="card"><h3>Smart Campus API</h3><p>FastAPI backend service for student and library management with automated testing.</p></div>
+      <div class="card"><h3>Retail Data Pipeline</h3><p>Automated Python and Pandas preprocessing workflow for customer analytics.</p></div>
+      <div class="card"><h3>Security Audit Tool</h3><p>Static analysis checklist detecting SQLi, XSS, and unsafe deserialization.</p></div>
+    </div>
+  </section>
+  <section id="contact">
+    <h2>Contact</h2>
+    <div class="contact-box">
+      <span>Email: ansika.adagiri@example.edu</span>
+      <span>GitHub: github.com/adagiri-ansika</span>
+      <span>Location: Telangana, India</span>
+    </div>
+  </section>
+</body>
+</html>

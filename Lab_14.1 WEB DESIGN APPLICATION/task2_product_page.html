@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Online Store | Product Page</title>
+  <style>
+    body { font-family: 'Segoe UI', sans-serif; background: #f8fafc; display: flex; justify-content: center; align-items: center; min-height: 100vh; margin: 0; padding: 1.5rem; }
+    .product-card { background: #fff; border-radius: 14px; border: 1px solid #e2e8f0; max-width: 720px; width: 100%; display: grid; grid-template-columns: 1fr 1fr; overflow: hidden; transition: transform 0.25s ease; }
+    .product-card:hover { transform: translateY(-4px); }
+    .product-card__media { background: #e2e8f0; display: flex; align-items: center; justify-content: center; padding: 2rem; }
+    .product-card__body { padding: 2rem; display: flex; flex-direction: column; justify-content: center; gap: 0.9rem; }
+    .product-card__title { font-size: 1.5rem; color: #0f172a; margin: 0; }
+    .product-card__desc { color: #475569; font-size: 0.95rem; margin: 0; }
+    .product-card__price { font-size: 1.4rem; font-weight: 700; color: #059669; }
+    .product-card__btn { background: #2563eb; color: #fff; border: none; padding: 0.85rem 1.25rem; border-radius: 8px; font-size: 1rem; font-weight: 600; cursor: pointer; }
+    .product-card__btn:hover { background: #1d4ed8; }
+    @media (max-width: 640px) { .product-card { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+  <article class="product-card">
+    <div class="product-card__media">
+      <svg width="160" height="160" viewBox="0 0 120 120" aria-label="Wireless Headphones">
+        <circle cx="60" cy="60" r="52" fill="#cbd5e1"/>
+        <path d="M30 68 C30 38, 90 38, 90 68" stroke="#1e293b" stroke-width="8" fill="none"/>
+        <rect x="24" y="64" width="14" height="28" rx="6" fill="#2563eb"/>
+        <rect x="82" y="64" width="14" height="28" rx="6" fill="#2563eb"/>
+      </svg>
+    </div>
+    <div class="product-card__body">
+      <h1 class="product-card__title">Studio Wireless Headphones</h1>
+      <p class="product-card__desc">Active noise cancellation, 35-hour battery life, and USB-C fast charging.</p>
+      <div class="product-card__price">Rs. 4,999</div>
+      <button class="product-card__btn" id="addCartBtn">Add to Cart</button>
+    </div>
+  </article>
+  <script>
+    document.getElementById("addCartBtn").addEventListener("click", () => {
+      alert("Added 'Studio Wireless Headphones' (Rs. 4,999) to your cart!");
+    });
+  </script>
+</body>
+</html>

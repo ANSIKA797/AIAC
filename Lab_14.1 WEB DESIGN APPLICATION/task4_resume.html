@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Adagiri Ansika | Resume</title>
+  <style>
+    html { scroll-behavior: smooth; font-family: 'Georgia', serif; color: #1e293b; }
+    body { margin: 0; background: #f1f5f9; }
+    nav { background: #0f172a; padding: 0.85rem 2rem; display: flex; gap: 1.5rem; justify-content: center; }
+    nav a { color: #e2e8f0; text-decoration: none; font-family: 'Segoe UI', sans-serif; font-size: 0.9rem; }
+    nav a:hover { color: #38bdf8; }
+    .resume { max-width: 900px; margin: 1.5rem auto; background: #fff; padding: 2rem; border-radius: 8px; border: 1px solid #cbd5e1; display: grid; grid-template-columns: 1fr 2fr; gap: 2rem; }
+    .sidebar { border-right: 2px solid #e2e8f0; padding-right: 1.5rem; }
+    h1 { margin: 0 0 0.25rem; font-size: 1.8rem; color: #0f172a; }
+    h2 { font-family: 'Segoe UI', sans-serif; font-size: 1.05rem; text-transform: uppercase; letter-spacing: 0.06em; color: #0284c7; border-bottom: 1px solid #cbd5e1; padding-bottom: 0.3rem; margin-top: 1rem; }
+    ul { padding-left: 1.2rem; line-height: 1.7; }
+    @media (max-width: 700px) { .resume { grid-template-columns: 1fr; } .sidebar { border-right: none; border-bottom: 2px solid #e2e8f0; padding-bottom: 1rem; } }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="#summary">Profile Summary</a>
+    <a href="#skills">Skills</a>
+    <a href="#education">Education</a>
+    <a href="#experience">Experience</a>
+  </nav>
+  <div class="resume">
+    <aside class="sidebar">
+      <h1>Adagiri Ansika</h1>
+      <p>B.Tech CSE (Batch 23)</p>
+      <section id="skills">
+        <h2>Skills</h2>
+        <ul><li>Python, Java, C++, SQL</li><li>HTML5, CSS3, JavaScript</li><li>FastAPI, Pandas, Git</li></ul>
+      </section>
+      <section id="education">
+        <h2>Education</h2>
+        <p><strong>B.Tech in CSE</strong><br/>SR University (2023–2027)</p>
+      </section>
+    </aside>
+    <main>
+      <section id="summary">
+        <h2>Profile Summary</h2>
+        <p>Motivated Computer Science undergraduate focused on backend API design, data preprocessing pipelines, and secure web development.</p>
+      </section>
+      <section id="experience">
+        <h2>Experience</h2>
+        <p><strong>AI-Assisted Coding Lab Projects</strong> (2026)</p>
+        <ul>
+          <li>Built RESTful microservices with FastAPI and automated assert test suites.</li>
+          <li>Designed normalized SQL schemas and data cleaning scripts in Pandas.</li>
+        </ul>
+      </section>
+    </main>
+  </div>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TechConf 2026 | Event Registration</title>
+  <style>
+    body { font-family: 'Segoe UI', sans-serif; background: #eef2ff; display: flex; justify-content: center; align-items: center; min-height: 100vh; margin: 0; padding: 1.5rem; }
+    .form-box { background: #fff; padding: 2rem; border-radius: 12px; border: 1px solid #c7d2fe; max-width: 460px; width: 100%; }
+    h1 { margin-top: 0; color: #1e1b4b; font-size: 1.5rem; }
+    .field { margin-bottom: 1rem; }
+    label { display: block; font-weight: 600; margin-bottom: 0.35rem; color: #334155; }
+    input, select { width: 100%; padding: 0.65rem; border: 1px solid #cbd5e1; border-radius: 6px; font-size: 0.95rem; box-sizing: border-box; }
+    button { width: 100%; padding: 0.8rem; background: #4f46e5; color: #fff; border: none; border-radius: 6px; font-size: 1rem; font-weight: 600; cursor: pointer; }
+    button:hover { background: #4338ca; }
+    .msg { margin-top: 0.9rem; font-weight: 600; font-size: 0.92rem; }
+    .error { color: #dc2626; }
+    .success { color: #059669; }
+  </style>
+</head>
+<body>
+  <main class="form-box">
+    <h1>TechConf 2026 Registration</h1>
+    <form id="regForm" novalidate aria-label="Conference Registration Form">
+      <div class="field">
+        <label for="fullName">Full Name</label>
+        <input id="fullName" type="text" required aria-required="true" placeholder="Adagiri Ansika" />
+      </div>
+      <div class="field">
+        <label for="email">Email Address</label>
+        <input id="email" type="email" required aria-required="true" placeholder="ansika@example.edu" />
+      </div>
+      <div class="field">
+        <label for="phone">Phone Number (10 digits)</label>
+        <input id="phone" type="tel" required aria-required="true" placeholder="9876543210" />
+      </div>
+      <div class="field">
+        <label for="session">Session Selection</label>
+        <select id="session" required aria-required="true">
+          <option value="">-- Choose a track --</option>
+          <option value="ai">AI & Machine Learning</option>
+          <option value="web">Modern Web Architecture</option>
+          <option value="sec">Application Security</option>
+        </select>
+      </div>
+      <button type="submit">Register Now</button>
+      <div id="statusMsg" class="msg" role="status" aria-live="polite"></div>
+    </form>
+  </main>
+  <script>
+    document.getElementById("regForm").addEventListener("submit", function (e) {
+      e.preventDefault();
+      const name = document.getElementById("fullName").value.trim();
+      const email = document.getElementById("email").value.trim();
+      const phone = document.getElementById("phone").value.trim();
+      const session = document.getElementById("session").value;
+      const msg = document.getElementById("statusMsg");
+      if (name.length < 2) { msg.textContent = "Please enter a valid name."; msg.className = "msg error"; return; }
+      if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { msg.textContent = "Please enter a valid email."; msg.className = "msg error"; return; }
+      if (!/^\d{10}$/.test(phone)) { msg.textContent = "Phone number must be 10 digits."; msg.className = "msg error"; return; }
+      if (!session) { msg.textContent = "Please select a conference session."; msg.className = "msg error"; return; }
+      msg.textContent = "Registration confirmed for " + name + "!";
+      msg.className = "msg success";
+    });
+  </script>
+</body>
+</html>
